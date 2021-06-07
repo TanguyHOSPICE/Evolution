@@ -1,0 +1,677 @@
+*,
+*::before,
+*::after {
+	/*1° pr ne pas avoir a modif les marging et padding*/
+	box-sizing: border-box; /*1*/
+}
+/* ON COMMENCE SUR 1 RESPONSIVE TEL */
+html {
+	font-size: 16px;
+	/* 2° font-size comme ça on peut appliquer des rem cela ne changera pas la police */
+}
+
+body {
+	font-family: "Source sans pro", sans-serif;
+	line-height: 1.625;
+	/* 3° line-height=(line-height txt de base s/maquette)/font-size */
+	margin: 0;
+	/* 4° enleve les margin des navigateurs */
+	color: #6f6f6f; /*E)*/
+}
+
+a {
+	color: inherit;
+	/* 6°liens hériterons de la couleur du content  */
+	text-decoration: none;
+	/* 7°pas obligatoire enlève TTES les déco des a */
+	transition: color 0.3s; /*13° effet sur le survole*/
+}
+
+/*B) les img sont trop grd dc on applique à toute la page */
+img {
+	max-width: 100%;
+	height: auto; /*calcul par rapport aux dim de départ*/
+}
+/*34° dégradé*/
+.header {
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.922045), rgba(54, 54, 54, 0.5) 39.24%, rgba(28, 28, 28, 0.4)),
+		url(img/eggs.jpg) center center / cover no-repeat; /* 5° centre img COVER=pr prendre la totalité de l'espace */
+	color: #fff; /*5°*/
+}
+
+.topbar {
+	padding: 18px 20px; /*14°espacement de la topbar vu sur make reserv.*/
+	font-size: 0.875rem;
+	/* 9°font-size=police maquette/police gnl=14/16 */
+	text-transform: uppercase; /*10°tout les liens st en Maj*/
+	text-align: center; /*11°text centré*/
+}
+
+.menu-item:hover {
+	color: #c89446; /*12°*/
+}
+
+.logo {
+	margin-bottom: 15px;
+}
+
+.menu-item {
+	margin: 0 15px; /*16°decolle les a*/
+}
+
+.menu-button {
+	border: solid 1px #c89446; /*38°finition button*/
+	padding: 4px 10px; /*38°finition button*/
+	transition-property: color, background-color;
+}
+
+.menu-button:hover {
+	background: #c89446;
+	color: #fff;
+}
+
+.baseline {
+	margin: 50px 0 70px 0; /*17°chiffres pour tel*/
+	text-align: center; /*17°*/
+	line-break: 1; /*30*/
+}
+/* 18° stylise la baseline */
+.baseline-welcome {
+	font-family: "Pinyon script", serif;
+	color: #c89446;
+	font-size: 2.2rem; /*ajustement pour tel,joue sur la police en rem soit 60px(police maquette)/16px(police html) gardé en 31° pr screen ms pas tel*/
+	display: block; /*20°décolle le txt*/
+}
+
+.baseline-name {
+	display: block; /*33°*/
+	font-size: 2.5rem; /*21° 70px(font maquette)/16px(police html)=font size mais vu 31° d'ou réduction pr tel*/
+	font-weight: 700; /*22°*/
+	line-height: 1; /*26°hteur ligne n'était pas respecté d'ou 1=100%*/
+	text-transform: uppercase; /*27°*/
+	letter-spacing: 5px; /*28° écartement lettres titre en 5px pr tel gardé en 31° pr screen*/
+	padding-bottom: 10px; /*32°*/
+}
+
+.baseline-slogan {
+	font-size: 1rem; /* 23° soit 24px/16px=1.5rem pr screen 31° pas tel*/
+	font-weight: 300; /*24°*/
+	display: block; /*25°*/
+	text-transform: uppercase; /*27°*/
+	letter-spacing: 2px; /* 29° 4px  pr screen 31° pas tel*/
+}
+
+/* 2ième partie en Maj */
+/* I) */
+.home-section {
+	padding-top: 9px;
+}
+
+/* A) */
+.container-small {
+	margin: 0 auto;
+	padding: 0 20px; /*selon maquette*/
+	max-width: 960px; /*920+padding*/
+}
+/* m) */
+.container {
+	margin: 0 auto;
+	padding: 0 20px; /*selon maquette*/
+	max-width: 1150px; /*selon maquette padding inclus*/
+}
+/* H) */
+.block {
+	margin-bottom: 50px; /*séparation entre les articles (block) a l'origine 70px ms trop>sur tel*/
+}
+
+/* C) */
+.title {
+	font-size: 1.75rem; /*convir de la maquette soit 28/16=1.75rem*/
+	font-weight: bold;
+	margin: 1rem 0 0 0; /*par défaut sur le navigateur il existe des margin*/
+	letter-spacing: 2px;
+	line-height: 1.1; /*hteur de ligne trop gd s/maquette*/
+	text-transform: uppercase;
+	color: #000; /*E)bis voir body*/
+}
+
+/* F)avt le title je vx 1 elt sans contenu,ac width et height et bckg dorée */
+.title::before {
+	content: "";
+	display: inline-block; /*pr le rendre visible et au dessus,pr le center petit trait après U) passage de block a inline-block*/
+	width: 24px;
+	height: 2px;
+	background: #c89446;
+	margin-bottom: 0.5rem; /*environ 15px soit 1fois la police d'ou 1rem*/
+}
+
+/* D) */
+.title span {
+	font-family: "Pinyon script", serif;
+	color: #c89446;
+	font-size: 2.5rem; /*40px/16=2.5*/
+	display: block; /*discover est en haut d'ou display*/
+	text-transform: none; /*vu que title en uppercase discover ne l'est pas*/
+}
+
+/* G) */
+.more {
+	color: #c89446;
+}
+/* G)bis */
+.more:hover {
+	text-decoration: underline;
+}
+
+/* G)bis */
+.more::after {
+	content: " >";
+}
+/* p{} par défaut ont 1 margin de 1em d'ou le fait de garder */
+/* P) */
+.block-img {
+	border: solid 1px #c89446; /*petit liserai*/
+	/* W) lorsque l'on diminu il existe un petit décalage*/
+	max-width: 350px;
+	margin: 0 auto;
+}
+/* Q)bis */
+.block-img img {
+	display: block;
+	position: relative;
+	z-index: 1;
+}
+/* U) centre txt Menu */
+.block-centered {
+	text-align: center;
+}
+
+/* 3ieme partie en min*/
+/* a) */
+.ingredients-menu {
+	margin: 40px 0;
+	font-weight: 600;
+	color: #383838;
+	text-align: center;
+	text-transform: uppercase;
+}
+.ingredients-menu a {
+	display: inline-block;
+	margin: 0 5px;
+	position: relative;
+}
+/* c) */
+.ingredients-menu a::after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 5px;
+	left: 0;
+	right: 0;
+	height: 1px;
+	opacity: 0;
+	background: #c89446;
+	transition: 0.3s;
+}
+
+/* d) */
+.ingredients-menu .active::after,
+.ingredients-menu a:hover::after {
+	bottom: 0;
+	opacity: 1;
+}
+
+/* e) txt coupé au mauvais endroit d'ou */
+.block-centered .block-body {
+	max-width: 640px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* i)bis */
+.menu-summary-item {
+	position: relative; /*i)bis en relation avec i) pr positionnement*/
+	padding-left: 120px; /*i)bis en relation avec i) pr positionnement*/
+	margin-bottom: 30px;
+}
+/* i) */
+.menu-summary-img {
+	position: absolute; /*i)bis en relation avec i) pr positionnement*/
+	top: 0; /*i)bis en relation avec i) pr positionnement*/
+	left: 0; /*i)bis en relation avec i) pr positionnement*/
+	width: 100px; /*100px provisoire rétréci img pour placé txt à coté s/tel*/
+}
+
+/* h) */
+.menu-summary-title {
+	font-size: 1.125rem; /*18px*/
+	color: #383838;
+	font-weight: bold;
+	/* t)bis vu qu'il reste des elts du losange apparent on chant le margin en padding */
+	/* margin-bottom: 0.75rem; *12px, on ne voit pas de diff car p aussi affecté* */
+	padding-bottom: 0.75rem;
+	margin-bottom: 0;
+}
+/* h)bis car margin bottom de h) n'est pas affecté */
+.menu-summary p {
+	/* t)bis vu qu'il reste des elts du losange apparent on chant le margin en padding */
+	/* margin-top: 0; */
+	margin: 0; /*t)bis*/
+	padding-bottom: 1rem; /*t)bis*/
+	font-size: 0.875rem; /*14px*/
+}
+/* j) */
+.menu-summary-price {
+	font-family: "Pinyon Script", serif;
+	color: #c89446;
+	font-size: 2.5rem; /*40px/16px*/
+	line-height: 1;
+}
+
+/* 4A) mise en place img de fds réservation meme modele que header */
+.reservation {
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.922045), rgba(54, 54, 54, 0.5) 39.24%, rgba(28, 28, 28, 0.4)),
+		url(img/reservation.jpg) center center / cover no-repeat;
+	color: #fff;
+	padding: 50px 0; /*espacer contenu par rapport au reste*/
+	color: rgba(255, 255, 255, 0.6); /*5B) on ne respecte pas maquette car se fond mx en blanc avec opacitée*/
+}
+/* 5A) couleur titre */
+.reservation .title {
+	color: #fff;
+}
+/* 6A) stylise les input & select */
+.reservation input,
+.reservation select {
+	padding: 0 0.5rem; /*1rem=16px*/
+	width: 100%; /*mets les input sur toute la largeur sur tel*/
+	margin-bottom: 15px;
+	border: solid 1px #6f6f6f;
+	background: transparent;
+	height: 40px;
+	font-size: 0.875rem; /*14px/16px*/
+	text-transform: uppercase;
+	color: #fff;
+	font-family: "Source Sans Pro", serif; /*par default change la font-family*/
+	/*7B) appearance respecter ordre*/
+	/*7B)préfixer pour les navigateurs*/
+	-moz-appearance: none; /*7C)mozilla*/
+	-webkit-appearance: none; /*7D)chrome*/
+	appearance: none; /*7B)*/
+}
+/* 8A)placement petite fleche du select */
+.reservation select {
+	background: no-repeat right 0.5rem center url(img/select.svg);
+}
+/* 7A)des que l'on selectionne chgmt de couleur et bordure */
+.reservation input:focus,
+.reservation select:focus {
+	background-color: rgba(255, 255, 255, 0.1);
+	border-color: #c89446;
+	transition: background 0.3s, border-color 0.3s;
+}
+/* 10A) */
+.reservation .button {
+	width: 100%;
+}
+
+/* 9A) */
+.button {
+	font-weight: 600; /*semi-bold*/
+	font-size: 0.875rem; /*14px/16px*/
+	color: #fff;
+	background: #c89446;
+	border: none; /*navigateur établi une bordure par déf*/
+	border: solid 1px transparent; /*11C)comme bordure pas prise en cpte cela entraine un décallage*/
+	padding: 11px 1rem;
+	text-transform: uppercase; /*11D)*/
+	cursor: pointer; /*11E)*/
+	transition: 0.3s;
+}
+/* 11A) */
+.button:hover {
+	border: solid 1px #c89446;
+	background: transparent; /*11B)comme bordure pas prise en cpte cela entraine un décallage*/
+}
+/* 15A) */
+.reservation p {
+	max-width: 625px; /*garde le txt sur 2 lignes*/
+	margin-left: auto; /*Centre le p*/
+	margin-right: auto; /*Centre le p*/
+}
+
+/* 14A) block-centered body possède 1max-width qui gène pour ici*/
+.reservation .block-centered .block-body {
+	max-width: 825px; /*somme des inputs et select*/
+}
+/* 17A) les options des selects ont une coleur hérité=#FFF d'ou chgt */
+select option {
+	color: #000;
+}
+
+/* 5ieme partie chiffre et min */
+/* 5a) */
+.recipes {
+	padding: 50px 0;
+}
+
+/* 4a) */
+.recipes .more {
+	display: block;
+	text-align: right;
+	margin-top: 60px;
+}
+
+/* 1b) */
+.recipes-list {
+	font-weight: 300; /*light*/
+	font-size: 1.125rem; /*18px/16px*/
+}
+/* 1c) police date */
+.recipes-list strong {
+	color: #383838;
+	font-weight: bold;
+}
+/* 2a) */
+.recipes-date strong {
+	font-size: 1.75rem; /*28px/16*/
+	line-height: 1.2;
+	display: block; /*pr faire me mois passer a la ligne*/
+}
+/* 1a) */
+.recipes-list-item {
+	border-bottom: solid 1px #f2f2f2;
+	margin-top: 1em; /**/
+}
+/* 3a) */
+.recipes-list-item:last-child {
+	border-bottom: 0;
+}
+/* 7a) */
+.recipes-list {
+	max-width: 920px;
+	margin-left: auto;
+}
+/* 8a) placement date à gauche */
+.recipes-list-item {
+	display: flex;
+}
+/* 9a) retire le décalage du P ac date */
+.recipes-list-item p {
+	margin-top: 0;
+}
+
+/* 8b) */
+.recipes-date {
+	width: 60px;
+	flex: none; /*ne grandit pas et ne rétrécis pas*/
+	line-height: 1;
+}
+
+/* 19° mise en place de responsive media queri*/
+@media only screen and (min-width: 600px) {
+	html {
+		font-size: 16px; /*cela permet d'affiner selon les écran juste la font-size du html*/
+	}
+	body {
+		background: linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));
+		/*35° ASTUCE pr calé sur ecran mettre le screenshot et ajout de l'opacité*/
+		/* background: url(screenshot.png) top center no-repeat; */
+	}
+	/* 36°temporairement applique s/header */
+	/* .header { */
+	/* background: none; */
+	/* border-bottom: solid 1px red; 40° PROVISOIRE pr ajuster padding de baseline */
+	/* } */
+	.logo {
+		padding-bottom: 0; /*42°*/
+		margin-left: 30px; /*43°rajout perso*/
+	}
+	.topbar {
+		display: flex; /*37°centrage du txt*/
+		max-width: 1110px; /*37°centrage du txt*/
+		margin: 0 auto; /*37°centrage du txt*/
+		justify-content: space-between; /*37°centrage du txt*/
+		align-items: center; /*42°*/
+	}
+	.baseline {
+		padding: 60px 0 227px; /*39° ajustement selon la maquette qui est pr screen jouer ac le 40°*/
+	}
+	.baseline-welcome {
+		font-size: 3.75rem; /*31° vu pb sur tel on ajuste*/
+	}
+	.baseline-name {
+		font-size: 4.375rem; /*31° vu pb sur tel on ajuste*/
+		letter-spacing: 12.5px; /*31° vu pb sur tel on ajuste*/
+		padding-top: -20px; /*41° ajustement ac 39° & 40°*/
+		/* color: gray; */
+		padding-bottom: 0px; /*41° ajustement ac 39° & 40°*/
+	}
+	.baseline-slogan {
+		font-size: 1.5rem; /*31° vu pb sur tel on ajuste*/
+		letter-spacing: 4px; /*31° vu pb sur tel on ajuste*/
+	}
+	.menu-button {
+		margin-top: 0;
+	}
+}
+/* J) */
+@media only screen and (min-width: 800px) {
+	/* T) espace entre les blocks*/
+	.block {
+		margin-bottom: 100px;
+	}
+	/* f) */
+	.block-last {
+		margin-bottom: 60px; /*décalage ac la maquette dc chgt au niveau a)ingredients-menu*/
+	}
+
+	.block-left,
+	.block-right {
+		display: flex;
+		justify-content: space-between; /*Y) en association ac X)*/
+		align-items: center;
+	}
+	/* Q)bis mise en place liserai */
+	.block-img {
+		border: none; /*on enlève lesbordure sur gd ecrans*/
+		/* flex: none; K)ne sera pas affecté par le display du J),enlevé après X) */
+		position: relative; /*pr utiliser les pseudo elts*/
+	}
+	/* X) */
+	.block-left .block-body,
+	.block-right .block-body {
+		width: 445px;
+		flex: none;
+	}
+	.block-img::before {
+		content: "";
+		display: block;
+		border: solid 1px #c89446;
+		position: absolute;
+		top: -30px;
+		left: -30px;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+	}
+	/* S) replacement du liserai right */
+	.block-right .block-img::before {
+		left: auto;
+		right: -30px;
+	}
+	/* K) */
+	.block-left .block-img {
+		width: 350px; /*img ne s'aggrandira pas au chgmt taille ecran*/
+		margin-left: 30px;
+	}
+	/* R) */
+	.block-right .block-img {
+		/* width: 350px; img ne s'aggrandira pas au chgmt taille ecran,enlevé après Y) */
+		/* flex: none; ne sera pas affecté par le display du J),enlevé après Y) */
+		margin-right: 30px;
+	}
+
+	/* * Q) * */
+	/* .block-img img { */
+	/* transform: translate(20px, 20px); *décalage liserai ms décalle assi la photo* */
+	/* } */
+
+	/* L)enlevé après X) */
+	.block-left .block-body {
+		margin-left: 94px; /*passé de 94px a 20px après X)*/
+	}
+	/* R) */
+	.block-right .block-body {
+		margin-right: 20px; /*passé de 94px a 20px après X)*/
+		order: -1; /*inverse l'image ds 1 flex*/
+	}
+	/* N) */
+	.title {
+		margin-bottom: 1.2rem;
+	}
+	/* M) */
+	.title::before {
+		margin-bottom: 10px; /*0.9rem ms les 20px fonctionnent mx ici après U)se retrouve légèrement décalé d'ou chgmt a 10px*/
+	}
+	/* O) */
+	.more {
+		display: block; /*ou inline-block*/
+		margin-top: 1.3rem;
+	}
+	/* V) placement 2 img de fds juste sur les screens car sur tel trop volumineux
+		,fixé pour un effet qd on scroll*/
+	.home-section {
+		background: fixed top 95px right 0 url(img/oranges.jpg) no-repeat, fixed top 640px left 0 url(img/spices.jpg) no-repeat;
+	}
+	.ingredients-menu {
+		margin: 0 32px;
+	}
+	/*rajout par moi*/
+	.ingredients-menu a {
+		margin-right: 32px;
+		margin-left: 32px;
+	}
+	/* g) */
+	.menu-summary {
+		position: relative; /*r)bis*/
+		padding: 85px 0; /*entre poite losange et txt des 4 menus*/
+		display: flex; /*n)bis DISPOSE EN LIGNE*/
+		justify-content: space-between; /*n)bis pr ecart entre les elts*/
+		flex-wrap: wrap; /*n)bis ENVOI A LA LIGNE QD PAS DE PLACE*/
+	}
+	/* k) */
+	.menu-summary-item {
+		margin-bottom: 135px; /*écarte les 4 menus*/
+		padding-left: 192px; /*img(160)+espace text(32)*/
+		width: calc(50% - 35px); /*n)placement des elts du menu dc il faut qu'ils prennent 50% de l'ecran et garde tjs cette écart entre elts*/
+	}
+	/* p)INV. position soit comme plus haut ac .left/right soit par nth-child */
+	.menu-summary-item:nth-child(2n) {
+		text-align: right; /*Colle à la tof*/
+		padding-left: 0;
+		padding-right: 192px; /*meme valeur en inv que les items de left*/
+	}
+	/* p)on peut utiliser 2n ou even */
+	.menu-summary-item:nth-child(2n) .menu-summary-img {
+		left: auto;
+		right: 0;
+	}
+	/* t)bis */
+	.menu-summary-item:nth-child(2n) .menu-summary-price {
+		margin-left: auto;
+	}
+	/* l) */
+	.menu-summary-img {
+		width: 160px; /*height auto vu qu l'on a établi cela plus haut*/
+	}
+	/* o) */
+	.menu-summary-title {
+		margin-top: 0; /*titre trop proche txt*/
+		line-height: 0.6; /*rajout par moi*/
+		background: #fff; /*t)pour couper le losange*/
+	}
+	.menu-summary p {
+		background: #fff; /*t)pour couper le losange*/
+	}
+	/* q)Positionne le prix par rapport à l'img  */
+	.menu-summary-price {
+		padding-top: 4px;
+		line-height: 0.3; /*rajout par moi*/
+		background: #fff; /*t)pour couper le losange*/
+		width: 85px; /*t)bis*/
+	}
+
+	/* r)2 facon pr LOSANGE soit en tant qu'bckg-img ms trop lg à charger ou pseudo elts */
+	.menu-summary::before {
+		content: "";
+		position: absolute; /*évite que tt se décalle*/
+		display: block;
+		top: 50%; /*positionnement au départ de 0px puis suite rotation qui fait le tt remonter on tatonne*/
+		left: 50%; /*positionnement*/
+		width: 420px;
+		height: 420px;
+		border: solid 1px #c89446;
+		transform: translate(-50%, -260px) rotate(45deg); /*s)on place avec translate le carré qui w=600px & H=600px puis rotate pr correspondre a maquette puis on change ces dim d'ou w=420px & h=420px*/
+	}
+	/* 4ieme partie en chiffre et Maj */
+	/* 1A)mise en place txt+img(img a gauche) */
+	.block-chief {
+		display: flex; /*mets img et txt l'un a coté de l'autre*/
+		align-items: center; /*centre txt et img les uns par rapport aux autres*/
+		margin-bottom: 0; /*1B)par défaut il y a 1margin dc on le retire pour le coller au form*/
+	}
+	/* .block-chief .more{margin-top:80px;} on peut jouer sur le margin-top pr coller à la maquette */
+
+	/* 2A) */
+	.block-chief .block-img::before {
+		display: none; /*Enléve le cadre*/
+	}
+	/* 3A) */
+	.block-chief .block-img {
+		flex: none; /*pr que l'img ne s'étende ou ne rétrécisse pas*/
+		width: 404px; /*largeur fixe.Pr dimension img ouvrir img ds visual code*/
+		order: 2; /* 3AB)Place l'img a dte*/
+	}
+	/* 4B)espacer contenu par rapport au reste */
+	.reservation {
+		padding: 100px 0;
+	}
+	/* 12A) */
+	.reservation-form-row {
+		margin: 64px 0;
+		display: flex;
+		justify-content: space-between;
+	}
+	/* 13A) */
+	.reservation-form-row input,
+	.reservation-form-row select {
+		width: calc(33.33% - 20px); /*100/3 vu que l'on veut 60px entre l'ensemble 60/3=20 */
+		margin-bottom: 0;
+	}
+	/* 16A) */
+	.reservation .button {
+		width: calc(33.33% - 20px);
+	}
+	/* 5b) */
+	.recipes {
+		padding: 60px 0;
+	}
+	/* 6a) */
+	.recipes .title {
+		text-align: right;
+	}
+	/* 6b) */
+	.recipes .container > p {
+		text-align: right;
+		max-width: 716px;
+		margin-left: auto;
+	}
+	/* 8c) */
+	.recipes-date {
+		width: 95px;
+	}
+	/* 10a) positionnement par rapport maquette */
+	.recipes-list {
+		margin: 60px 0;
+	}
+}

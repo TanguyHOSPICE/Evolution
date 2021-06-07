@@ -1,0 +1,70 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #f1f1f1;
+	height: 100vh;
+	font-family: sans-serif;
+}
+.accueil {
+	height: 60vh;
+	min-height: 600px;
+	width: 100%;
+	background: #232323;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: #f1f1f1;
+	text-align: center;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+h5 {
+	font-size: 30px;
+	border: 1px solid #f1f1f1;
+	padding: 20px 10px;
+	border-radius: 20px;
+	box-sizing: 0 5px 10px 0;
+}
+
+.contenu {
+	padding: 40px 60px; /*effet blog*/
+	text-align: justify;
+}
+/* Animation */
+
+.effet1 {
+	opacity: 0;
+	transition: all 0.4s linear;
+}
+.effet2 {
+	opacity: 0;
+	transition: all 0.4s linear;
+}
+.effet3 {
+	opacity: 0;
+	transition: all 0.4s linear;
+}
+.effet4 {
+	opacity: 0;
+	transition: all 0.4s linear;
+}
+.effet5 {
+	opacity: 0;
+	transition: all 0.4s linear;
+}
+.effet6 {
+	opacity: 0;
+	transition: all 0.4s linear;
+}
+.effet7 {
+	opacity: 0;
+	transition: all 0.4s linear;
+}
+
+.fade-in {
+	opacity: 1;
+}

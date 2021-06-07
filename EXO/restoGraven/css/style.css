@@ -1,0 +1,129 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+}
+
+body {
+	background-color: #1695da;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: "Kenia", cursive;
+}
+
+.title-box {
+	font-size: 40px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+	z-index: 999;
+	position: absolute;
+	top: 180px;
+	box-shadow: -13px 13px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+	font-size: 25px;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+}
+
+/*   **Slider**     */
+.sliders {
+	overflow: hidden;
+}
+
+.slides {
+	display: flex;
+	flex-direction: row;
+	width: calc(500px * 4);
+	height: 720px;
+	animation: slidemotion 15s infinite ease;
+}
+
+.slide {
+	opacity: 0.4;
+}
+
+@keyframes slidemotion {
+	0% {
+		transform: translateX(0);
+	}
+
+	10% {
+		transform: translateX(0);
+	}
+
+	33% {
+		transform: translateX(-500px);
+	}
+
+	66% {
+		transform: translateX(-500px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+/*   **Menu**     */
+
+nav.menu {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	transform: translateY(-140px);
+}
+
+nav li a {
+	color: white;
+}
+
+.item {
+	padding: 60px;
+	margin: 5px;
+	font-size: 2rem;
+	background-size: cover;
+}
+
+.item:hover {
+	transform: scale(-0.8) rotate(180deg);
+}
+
+.pizza {
+	background-image: url(../images/pizza-banner.jpg);
+}
+
+.salad {
+	background-image: url(../images/salad-banner.jpg);
+}
+
+.burger {
+	background-image: url(../images/burger-banner.jpg);
+}
+
+.drink {
+	background-image: url(../images/boisson-banner.jpg);
+}
+
+section img {
+	width: 100%;
+}
+section div {
+	display: flex;
+	flex-direction: column;
+}

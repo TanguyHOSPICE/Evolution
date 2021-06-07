@@ -1,0 +1,237 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+body {
+	height: 100vh;
+	width: 100%;
+	font-family: "fontawesome-webfont", sans-serif;
+}
+/* ********************************************* bannière principale  */
+
+/*? ***************************** Banner */
+#home {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 50vh;
+}
+
+@media (max-width: 991px) {
+	#home .banner {
+		max-width: 1300px;
+	}
+}
+
+#home .banner {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	position: relative;
+	width: 100%;
+}
+
+#home .banner img {
+	height: 50vh;
+}
+
+#home .banner h6 {
+	font-size: 2em;
+	color: #06aebf;
+}
+
+#home .banner h3 {
+	font-size: 1.5em;
+	color: black;
+	margin: 10px 0;
+}
+
+#home .banner p {
+	font-size: 1.3em;
+	color: black;
+	margin: 20px 0 25px;
+}
+
+#home .banner a {
+	background: linear-gradient(45deg, rgb(10, 153, 209), rgb(46, 197, 178));
+	box-shadow: 5px 5px 6 px #06aebf;
+	border-radius: 10px;
+	color: whitesmoke;
+	padding: 15px 20px;
+	font-size: 1.5em;
+}
+
+@media (max-width: 690px) {
+	#home .banner {
+		height: 100%;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#home .banner h6 {
+		font-size: 1.5em;
+	}
+
+	#home .banner h3 {
+		font-size: 1.2em;
+		margin: 5px 0;
+	}
+
+	#home .banner p {
+		font-size: 1em;
+		margin: 10px 0 15px;
+	}
+
+	#home .banner a {
+		font-size: 0.6em;
+	}
+}
+
+/*? ***************************** Informations */
+/* 
+#infos > div {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100%;
+} */
+#infos .container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 20px;
+}
+
+#infos .container .bloc {
+	text-align: center;
+	background: linear-gradient(45deg, rgb(10, 153, 209), rgb(46, 197, 178));
+	width: 300px;
+	height: 300px;
+	margin: 30px 10px 0 10px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+#infos .container .bloc:hover {
+	box-shadow: 0px 65px 90px -55px #565656;
+	transform: translateY(-10px);
+}
+
+#infos .container .bloc span.fa {
+	font-size: 2.8em;
+}
+
+#infos .container .bloc h3 {
+	font-size: 1.5em;
+	margin: 30px 0 15px 0;
+}
+
+#infos .container .bloc span.fa,
+#infos .container .bloc h3,
+#infos .container .bloc p {
+	color: white;
+}
+
+/*? ***************************** Formulaire */
+section#appointment {
+	background-color: #f9f9fb;
+	padding: 50px 0;
+}
+
+section#appointment .container {
+	max-width: 1200px;
+	height: 540px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row-reverse;
+	background-color: white;
+}
+/* formulaire */
+section#appointment .container .form {
+	width: 50%;
+	margin-right: 30px;
+}
+
+section#appointment .container .form form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+section#appointment .container .form h3 {
+	font-size: 2em;
+	color: #2a2a2a;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+section#appointment .container .form input {
+	margin: 10px 0;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-bottom: 2px solid #e4e4ec;
+	transition: 0.3s ease-in-out;
+}
+
+section#appointment .container .form input:hover {
+	border-bottom: 2px solid #1fb3bf;
+}
+
+section#appointment .container .form input.family-name,
+section#appointment .container .form input.email {
+	width: 40%;
+}
+
+section#appointment .container .form input.tel,
+section#appointment .container .form input.date,
+section#appointment .container .form input.schedule {
+	width: 30%;
+}
+
+section#appointment .container .form form button {
+	width: 190px;
+	height: 60px;
+	background: linear-gradient(45deg, rgb(99, 146, 255), rgb(46, 197, 178), rgb(99, 146, 255));
+	border-radius: 8px;
+	border: none;
+	outline: none;
+	color: white;
+	font-weight: bold;
+	font-size: 1.2em;
+	cursor: pointer;
+	margin-top: 30px;
+}
+
+/* image formulaire */
+section#appointment .container .form-img {
+	width: 40%;
+	height: 100%;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	border-radius: 15px;
+	background: linear-gradient(45deg, rgb(12, 156, 190), rgb(46, 197, 178), rgb(99, 146, 255));
+}
+
+section#appointment .container img {
+	width: 100%;
+	width: 300px;
+	border-top: 1px dashed rgb(161, 191, 255);
+	border-right: 1px dashed rgb(161, 191, 255);
+	border-radius: 10px;
+	box-shadow: -5px 5px #e4e4ec;
+}

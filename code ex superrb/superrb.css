@@ -1,0 +1,92 @@
+body{
+    max-width: 120px;
+    margin: auto;
+    font-family: 'Georgia';/*police*/
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    background: rgb(93, 93, 245);/*fdecran*/
+}
+
+.headlines{
+    text-align: center;
+    font-weight: 800;
+    /*image de vague*/
+    background: url(https://www.superrb.com/frontend/img/homepage/header-wave-dark.svg);
+    background-repeat: repeat-x;
+    background-size: 200vw;
+    background-position: top center;
+    background-position-x: 100px;
+    animation: transitionWave linear infinite 20s;/*animation de la vague*/
+    background-position-y: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+h1{
+    font-size: 6.5em;
+    line-height: 1;
+    margin-bottom: O;
+}
+
+h3{
+    font-size: 1.4em;
+    line-height: 1;
+}
+
+/*animation vague*/
+@keyframes transitionWave{
+    from {background-position-x: 0;}
+    to {background-position-x: 100%;}
+}
+
+p{
+    /*positionnement footer*/
+    position: absolute;
+    bottom: 0px;
+    clear: right;  
+}
+
+/* nav */
+    /*bandeau nav*/
+    .nav ul{
+        list-style-type: none;
+        overflow: hidden;
+        /*background-color: rgb(93, 93, 245);*/
+        /*bordures rondes du bandeau nav*/    
+        border-radius: 5px;
+        position: relative;
+        right: -250px;
+    }
+    /*liste du bandeau nav*/
+    .nav li{
+        float: right;/*positionne le bandeau à doite*/
+    }
+    
+    /*style bandeau nav*/
+    .nav li a{
+        text-decoration: none;/*efface le soulignement*/
+        display: block;/*cadre autour li nav*/
+        width: 80px;/*taille bloc de liste*/
+        padding: 15px;
+        color: white;
+    }
+    /*pages non actives ac passage souris*/
+    .nav li a:hover{
+        background-color: #f1f1f1;
+        border-radius: 15px;
+        color:black;
+    }
+    
+    /*positionnement bandeau nav*/
+    .nav{
+        position: sticky;/*positionnement reste à vue pdt scrolling*/
+        top: 0;/*choix endroit du possitionnement*/
+    }
+    /*page active ds bandeau nav*/
+    .active{
+        background-color: black;
+        border-radius: 5px;
+        
+    }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gwada butterfly adventures</title>
+    <!---->
+    <meta name="description" content="GBA Guadeloupe">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!---->
+    <header class="header">
+        <h1 class="header-title" >Gwada Butterfly Adventures, Contact</h1>
+        <nav class="header-nav">
+            <a href="index.html" title="accueil" >Accueil</a>
+            <a href="formules.html" title="formules" >Formules</a>
+            <a href="contact.html" title="Nous contacter ou réserver" >contact</a>
+        </nav>
+    <!--img a redim et tournée-->
+        <img src="img/butterflydesi.jpeg" alt="photo GB a pte des chtx" width="1200" height="300" >
+        
+    </header>
+    <section >
+        <h2>Ou nous trouver</h2>
+        <p>
+            Marina de St Francois <br>
+            Quai C <br>
+            97118 St Francois
+        </p>
+        <!--lien google map-chercher lieu-cliquer puis partager-->        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819.1899580296889!2d-61.26818607080048!3d16.25291669929798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDE1JzEwLjUiTiA2McKwMTYnMDMuNSJX!5e1!3m2!1sfr!2sfr!4v1592865003862!5m2!1sfr!2sfr" width="1200" height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <h2>Nous envoyer un Email et/ou Réserver</h2>
+        <!--action=contact.html en attendant le back end-->
+        <form action="contact.html">
+            <div>
+                <label for="email">votre email<sup>*</sup></label>
+        <!--required=obligatoirement requis-->
+                <input type="text" required id="email" name="email" placeholder="votre@email.fr">
+            </div>
+            <div>
+                <label for="firstname">votre prénom<sup>*</sup></label>
+                <input type="text" required id="firstname" name="firstname" >
+            </div>
+            <div>
+                <label for="lastname">votre nom<sup>*</sup></label>
+                <input type="text" required id="lastname" name="lastname" >
+            </div>
+            <div>
+                <label for="arrival_period">date d'arrivée en Guadeloupe<sup>*</sup></label>
+                <input type="date" required id="arrival_period" name="arrival_period" >
+            </div>
+            <div>
+                <label for="departure_period">date de départ de Guadeloupe<sup>*</sup></label>
+                <input type="date" required id="departure_period" name="departure_period" >
+            </div>
+            <div>
+                <label for="adult_number">Nombre(s) adulte(s)<sup>*</sup></label>
+                <input type="number" required id="adult_number" name="adult_number" >
+            </div>
+            <div>
+                <label for="child_number">Nombre(s) enfant(s)<sup>*</sup> <sup>**</sup></label>
+                <input type="number" required id="child_number" name="child_number" >
+            </div>
+            <div>
+                <label for="destination">Destinations<sup>*</sup></label>
+                <input type="text" required id="destination" name="destination" >
+            </div>
+            <div>
+                <label for="message">Votre message</label>
+                <textarea id="message" name="message" rows="20" cols="80" ></textarea>
+            </div>
+            <div>
+                <p>
+                    <sup>*</sup>:Champs obligatoires
+                    <sup>**</sup>:  2 ans&lt;Enfants&lt; 11 ans
+                </p>
+            </div>
+            <button type="submit" >Envoyer</button>
+        </form>
+    </section>
+    
+    
+    <footer class="footer" >
+        <p>&copy; copyright Gwada Butterfly Adventures</p>
+    </footer>
+</body>
+
+</html>

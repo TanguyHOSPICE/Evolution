@@ -1,0 +1,156 @@
+/*Pour le positionnement mettre 1 bckgd puis une fois terminé le retirer
+ex:.header-nav*/
+body{
+    margin: 0;
+/*5°naviguateurs par défaut mettent 1margin
+donc pour écraser cette mise/défaut margin=0*/
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+/*11°letter-spacing=espace entre les lignes*/
+    font-family: "Source Sans Pro", serif;    
+}
+
+
+.header{
+    background: grey;
+/*1°background pour délimité visuellement*/
+    padding: 20px;
+/*2°padding pr marges int.*/
+    color: #ffffff;
+/*8°chgmt couleut txt*/    
+    /*background:
+         linear-gradient(to bottom, #0818f8,#47548b),
+         center top, cover, url(img/boatminhoriz.jpg) fixed;*/
+    /*17°*
+    background-image: /*linear-gradient(to bottom, #0818f8,#47548b)*/, url(img/boatminhoriz.jpg);
+    /*dégradé+img de fds*
+    background-repeat: no-repeat;
+    /*1 img*
+    background-position: center top;
+    /*position img fds*
+    background-size: 100% 100% cover;
+    /*taille img fds*
+    background-attachment:local, fixed;
+    /*fixation img*
+    */
+}
+
+.header img{
+    width: 100%;
+    height: auto;
+/*3°img en display inline est une exception car on peut jouer s/largeur et hteur (voir code html)*/
+/*3°si joue que s/width img sera déformée d'ou height=auto*/
+}
+
+.header-nav{
+    margin: 20px 0;
+/*6°=display block que long veux décoller de l'img
+ici s'applique la fusiondes marges(la +gde l'emporte) avec header-titre*/
+    text-align: center;
+/*12°bis Txt-align influence que les Elts de type Inline-block ou Inline*/
+    position: absolute;
+    right: 0;
+    top: 40px;
+    padding: 0px 20px;
+    font-size: 18px;
+    background-color: lightcoral;
+/*14°pos absol=position par rapport a la page+padding pr coller au bord droit img*/
+/*15°pos fixed=permet de garder le bandeau en ht de la page ms fixé /rapport a la page
+ici .header-nav
+sticky=permet de garder le bandeau en ht de la page ms fixé /rapport a la fenetre*/
+/*16°position=relative mvt par rapport a la box de nav
+ex:*/
+}
+
+
+.header-nav a{
+    padding: 0 10px;
+/*7°espacement des liens(utilisé +tot padding pr les liens car allonge la zone cliquable ici de 10px)*/
+    color: inherit;
+/*9°inherit=hérite de la couleur du parent
+ici du header n°8 comme ca pas besoin
+si chgmt de le faire à chacun ms juste au n°8 */
+    text-decoration: none;
+}
+
+
+.header-nav a:hover{
+    text-decoration: underline;
+}
+
+
+.header-title{
+    margin-top: 0;
+/*6°naviguateurs par défaut mettent 1margin-top
+donc pour écraser cette mise/défaut margin-top=0*/
+}
+
+.main{
+    background: lightgrey;
+/*1°background pour délimité visuellement*/
+    padding: 20px;
+/*4°padding pr marges int.*/
+    line-height: 1.4;
+    font-size: 16px;
+/*10°line-height=écart les lignes du txt*/
+}
+
+.main p{
+    text-align: justify;
+/*12°txt-align=justify étant le txt*/
+}
+
+/*Table*/
+th{
+    border: 2px solid;
+    border-color: black;
+    background: rgb(32, 77, 199);
+    color: white;
+}
+
+
+tr, td{
+    border: 2px solid;
+    border-color: black;
+    padding: 2px;
+}
+/*--*/
+
+
+.button{
+    color: #FFF;
+    text-decoration: none;
+    background: rgb(235, 231, 6);
+    padding: 0.2em 0.5em;
+    font-size: 20px;
+}
+
+.button-contact{
+        color: #FFF;
+        text-decoration: none;
+        background: rgb(235, 231, 6);
+        padding: 0.2em 0.5em;
+        font-size: 20px;
+        position: absolute;
+        right:50%;
+        top: auto;
+        bottom: 30%;
+}
+
+
+.footer{
+    background: grey;
+/*1°background pour délimité visuellement*/
+    padding: 10px 20px;
+/*4°padding pr marges int. ici haut+bas 10px guauche+dte 20px*/
+    text-align: justify;
+/*12°*/
+    bottom: 0;
+    width: 100%;
+/*13°fixe footer en bas s/tte la largeur*/
+}
+
+.footer p{
+    text-align: center;
+/*12°*/
+}

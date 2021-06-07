@@ -1,0 +1,173 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+html,
+body {
+	margin: 0;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+		"Segoe UI Symbol";
+	background-color: #fffc00;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+/*? ******************NAVBAR**/
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+header .logo-wrapper {
+	display: flex;
+	align-items: center;
+	/* justify-content: space-evenly; */
+}
+
+header i,
+header h1 {
+	font-size: 6rem;
+	font-weight: 700;
+	margin: 0 5px;
+}
+
+header i {
+	color: #ff4757;
+}
+
+header ul {
+	display: flex;
+	font-weight: 700;
+}
+
+header ul li {
+	margin-right: 10px;
+	text-decoration: underline;
+}
+
+/*? *******************MAIN**/
+main {
+	display: flex;
+	justify-content: space-between;
+	padding: 5rem; /*pour centrer*/
+}
+
+section,
+aside {
+	background-color: #fff;
+	padding: 20px;
+	margin: 5px;
+}
+
+section {
+	flex: 2;
+}
+
+aside {
+	flex: 1;
+}
+
+aside ul {
+	display: flex;
+	flex-direction: column;
+}
+
+aside li {
+	flex: 1;
+	align-self: stretch;
+	background-color: #ececec;
+	margin: 5px; /*séparation bcg*/
+	padding: 10px; /*taille des li*/
+}
+
+.illustration {
+	margin: 20px;
+}
+
+.floated-left {
+	float: left;
+}
+
+.floated-right {
+	float: right;
+}
+
+/*? *******************FOOTER**/
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	min-height: 500px;
+	background-color: #000000;
+	color: #fffc00;
+	padding: 2rem 0;
+}
+
+.upper-footer {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	align-self: stretch; /*permet d'étendre sur la "div"*/
+	flex: 1; /* permet de prendre l'espace au centre*/
+}
+
+.upper-footer .socials i {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.upper-footer .socials li:nth-child(2) {
+	margin: 10px 0;
+}
+
+footer a {
+	color: #fffc00;
+	font-weight: 700;
+}
+footer a:active {
+	color: #f047ff;
+}
+footer a:hover {
+	color: #ff4757;
+}
+footer a:enabled {
+	color: #fffc00;
+}
+
+.back-to-top {
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	width: 100px; /*cercle fusée*/
+	height: 100px; /*cercle fusée*/
+	border-radius: 50%; /*cercle fusée*/
+	background: #ff4757; /*bcg fusée*/
+	color: #fff; /*couleur fusée*/
+	display: flex;
+	font-size: 2rem; /*taille fusée*/
+	display: flex; /*centrage fusée ds son cercle*/
+	align-items: center; /*centrage fusée ds son cercle*/
+	justify-content: center; /*centrage fusée ds son cercle*/
+}
+
+.back-to-top a:hover {
+	background: #ff4757;
+}
+
+.back-to-top i:active {
+	background: #f047ff;
+}

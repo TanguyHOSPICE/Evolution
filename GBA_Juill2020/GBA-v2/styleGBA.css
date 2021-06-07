@@ -1,0 +1,183 @@
+body{
+    max-width: 120px;
+    margin: auto;
+    font-family: 'Georgia';/*police*/
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    
+}
+
+.headlines{
+    text-align: center;
+    font-weight: 800;
+    /*image de vague*/
+    background: url(https://www.superrb.com/frontend/img/homepage/header-wave-dark.svg); 
+    background-repeat: repeat-x;
+    /*background-size: 200vw;
+    background-position: center;*/
+    background-position-x: 100px;
+    animation: transitionWave linear infinite 20s;/*animation de la vague*/
+    /*background-position-y: -300px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;*/
+}
+
+h1{
+    font-size: 6.5em;
+    line-height: 1;
+    margin-bottom: O;
+}
+
+
+/*animation vague*/
+@keyframes transitionWave{
+    from {background-position-x: 0;}
+    to {background-position-x: -200vw;}
+}
+
+
+
+/* nav */
+        /*bandeau nav*/
+.nav ul{
+    list-style-type: none;
+    overflow: hidden;
+    /*background-color: rgb(93, 93, 245);*/
+    /*bordures rondes du bandeau nav*/    
+    border-radius: 5px;
+}
+        /*liste du bandeau nav*/
+/*.nav li{
+    float: left;
+}*/
+
+        /*style bandeau nav*/
+.nav li a{
+    text-decoration: none;/*efface le soulignement*/
+    display: block;/*cadre autour li nav*/
+    padding: 15px;
+    color: white;
+}
+        /*pages non actives ac passage souris*/
+.nav li a:hover{
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    color:black;
+}
+
+        /*positionnement bandeau nav*/
+.nav{
+    position: sticky;       /*positionnement reste à vue pdt scrolling*/
+    top: 0;                 /*choix endroit du possitionnement*/
+}
+        /*page active ds bandeau nav*/
+.active{
+    background-color: black;
+    border-radius: 5px;
+}
+
+/* page accueil */ 
+
+/*.Accueil{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}  
+
+.Accueil h1{
+    text-align: left;
+}*/ 
+
+
+/*h1{color: blue;text-align: center;text-transform: capitalize;font-family: 'Segoe UI';}*/
+ 
+/*h2{color: whitesmoke;text-align: left;text-transform: uppercase;font-family: Georgia;}*/  
+   
+/*img{width: 33%;opacity: 0.5;display: block;}
+
+img:hover{opacity: 1;}
+#bckg{width: none;opacity: 0.8; z-index: 11;}
+/*Positionnement img*/
+/*#bstlouis1
+{
+    position: relative;
+    left: 33px;
+    top: 0px;
+    z-index: 9; /*position Ar.plan*/
+    /*border-radius: 50px;
+}
+#bstlouis2
+{
+    position: relative;
+    left: 300px;
+    top: -33px;
+    z-index: 7; /*position Mil.plan*/
+    /*border-radius: 80px;
+}
+#bstlouis3
+{
+    position: relative;
+    left: 600px;
+    top: -100px;
+    z-index: 4; /*position Avt.plan*/
+    /*border-radius: 80px;
+}*/
+
+/*p{text-align: left;}*/
+
+/* page contact */
+.table{
+    width: 80%;
+    margin: auto;
+} 
+
+.table table th{
+    background-color: red;
+    color: white;
+    height: 50px;
+}
+
+.table table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table table td{
+    height: 30px;
+}
+
+.table table th, .table table td{
+    text-align: center;
+    border:1px solid #ddd;
+}
+
+.table table tr:hover{
+    background-color: black;
+    color: white;
+}
+
+.table table td a:hover{
+    color: white;
+}
+
+.table resa h2{
+    color: whitesmoke;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: Georgia;    
+} 
+
+/* footer */
+.footer{
+    height: 5%;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    background-color: black;  
+}
+.footer p{
+    text-align: center;
+    color: white;
+}

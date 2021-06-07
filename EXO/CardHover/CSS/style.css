@@ -1,0 +1,80 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #ecf0f1;
+}
+
+.container {
+	position: relative;
+	width: 500px;
+	height: 300px;
+}
+
+h1 {
+	margin-top: 20px;
+}
+
+.card {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 20px 80px 20px 20px;
+	border-radius: 20px;
+	transition: clip-path 0.5s ease-in-out;
+	cursor: pointer;
+}
+
+/* ***************** CARD nth-child ******************** */
+.card:nth-child(1) {
+	clip-path: circle(7% at 94% 20%);
+	background-color: rgb(17, 172, 192);
+}
+
+.card:nth-child(2) {
+	clip-path: circle(7% at 94% 50%);
+	background-color: rgb(28, 112, 209);
+}
+
+.card:nth-child(3) {
+	clip-path: circle(7% at 94% 80%);
+	background-color: rgb(57, 34, 202);
+}
+
+.card:hover {
+	clip-path: circle(73%);
+	z-index: 99;
+}
+
+/* **************** CARD Icons ******************* */
+
+.card::before {
+	font-family: "FontAwesome";
+	position: absolute;
+	font-size: 1.7em;
+	color: #fff;
+	box-shadow: 5px rgb(122, 185, 182);
+}
+
+.card:nth-child(1)::before {
+	content: " \f129 ";
+	top: 52px;
+	right: 31px;
+}
+
+.card:nth-child(2)::before {
+	content: " \f1d8 ";
+	top: 46%;
+	right: 23px;
+}
+
+.card:nth-child(3)::before {
+	content: " \f21a ";
+	bottom: 0;
+	right: 31px;
+}
+
+.card:hover::before {
+	color: transparent;
+}

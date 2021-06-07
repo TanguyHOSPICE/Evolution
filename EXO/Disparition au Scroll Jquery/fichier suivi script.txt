@@ -1,0 +1,29 @@
+$(function(){Va se lancer qd doc va charger de L1 a L6})
+
+attribution d'une const (pr eviter d'avoir a écrire $(document a chq fois))
+attribution d'une const (pr elts qui vont disparaitre ici .effet)
+
+
+doc.on('scroll') 
+    dès que l'on va scroller on va lancer , function(){}
+
+
+let posActuelle = doc.scrollTop() 
+    donne la position actuelle lors scroll
+console.log(posActuelle); 
+    Ns donne position  lors du sroll par rapport au top (inspecter-console)
+
+elts disparition pr chq elt
+let decalageTop = $(this) 
+    donne position du this (crspd au each) this=elts actuelle lors scroll.offset=décalage().top=par rapport au top
+console.log("Decal" + decalageTop) 
+    Permets de voir le décalage et décalage par rapport au top
+
+if(posActuelle > decalageTop)
+    si notre position actuelle est supérieur a l'elts qui est en décalage top (=position de notre elts par rapport au scroll)
+$(this).css('opacity') 
+    On prend l'elts ici this celui du moments on va changé son opacité ds son css
+
+, 1 - (posActuelle - decalageTop) / 1000)
+    On passe l'opacité a 1 - (tps calculé pr disparition)/1000(=va + ou - vite si on change)
+

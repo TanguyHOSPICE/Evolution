@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="CSS/styleDropDown.css">
+    <title>DropDown</title>
+</head>
+
+<body>
+    <header id="navbar" class="nav">
+        <a href="#">Onglet1</a>
+        <a href="#">Onglet2</a>
+        <div class="dropdown-1">
+            <button>Onglet3</button>
+            <div class="content">
+                <a href="#">Sous-Onglet1</a>
+                <a href="#">Sous-Onglet2</a>
+                <a href="#">Sous-Onglet3</a>
+            </div>
+        </div>
+        <a href="#">Onglet4</a>
+        <a class="icon" onclick="myFunction()">&#9776;</a>
+
+    </header>
+
+
+    <!-- Rajout d'une class onclick -->
+    <script>
+        function myFunction() {
+
+            var x = document.getElementById("navbar");//Prend l'élément par l'#Navbar
+
+            //si il y a uniquement(===) la class nav
+            if (x.className === "nav") {
+                x.className += " responsive ";//rajout class responsive
+            } else {
+                x.className = "nav";//Si class responsive présente remet seulement .nav
+            }
+        }
+    </script>
+
+</body>
+
+</html>
